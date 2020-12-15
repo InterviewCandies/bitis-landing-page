@@ -2,7 +2,7 @@
 
 ## Live demo: https://relaxed-ritchie-f33813.netlify.app/
 
-Note: Change viewport to see website reponsive
+Note: Change viewport to see website responsive
 
 ---
 
