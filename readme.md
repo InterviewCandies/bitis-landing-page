@@ -2,6 +2,8 @@
 
 ## Live demo: https://relaxed-ritchie-f33813.netlify.app/
 
+Note: Change viewport to see website reponsive
+
 ---
 
 ## Technologies
@@ -15,7 +17,7 @@
 ## What i learned
 
 - Reponsive with media query
-- Transplate fucntion in CSS
+- Transplate function in CSS
 
 ---
 
