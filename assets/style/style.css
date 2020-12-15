@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body,
+html {
+  height: 100%;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 100px;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  position: relative;
+  max-width: 80px;
+  object-fit: contain;
+}
+
+.toggle {
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-size: 30px;
+  background-image: url("../menu.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: invert(1);
+  display: none;
+  z-index: 11;
+}
+
+.toggle.active {
+  background-size: 30px;
+  background-image: url("../close.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: none;
+}
+
+.navigation.active {
+  position: fixed;
+  background-color: #0779e4;
+  color: #fff;
+  font-size: 32px;
+  grid-gap: 32px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  display: none;
+}
+.navigation.active li a {
+  color: white;
+}
+
+ul {
+  display: flex;
+  position: relative;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 50px;
+  font-weight: 500;
+}
+
+li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.textbox {
+  margin-top: 40px;
+  position: relative;
+  max-height: 600px;
+}
+
+.content .imgbox img {
+  margin-top: 50px;
+  max-width: 550px;
+  object-fit: contain;
+  background-size: cover;
+}
+.content .imgbox {
+  width: 700px;
+  display: flex;
+  justify-content: flex-end;
+}
+.textbox h2 {
+  font-size: 3em;
+  line-height: 1.4em;
+  color: #333;
+  font-weight: 500;
+}
+
+.textbox p {
+  max-width: 500px;
+}
+
+.textbox h2 span {
+  color: #0779e4;
+  line-height: 2;
+  font-size: 1.3em;
+  font-weight: 900;
+}
+.textbox p {
+  margin-bottom: 20px;
+}
+.textbox a {
+  text-decoration: none;
+  letter-spacing: 1;
+  font-weight: 600;
+  padding: 8px 20px;
+  background-color: #0779e4;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.thumb {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  bottom: 20px;
+  align-items: center;
+  transform: translateX(-50%);
+  justify-content: center;
+}
+.thumb li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.thumb li:hover {
+  transform: translateY(-15px);
+}
+
+.thumb li img {
+  max-width: 80px;
+}
+
+.links {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  right: 20px;
+  grid-gap: 10px;
+}
+
+.links li a img {
+  width: 40px;
+  filter: invert(1);
+}
+
+#facebook {
+  width: 30px;
+  margin-top: 10px;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  background-color: #0779e4;
+  top: 0;
+  left: 0;
+  position: absolute;
+  clip-path: circle(600px at right 750px);
+}
+
+@media only screen and (max-width: 1200px) {
+  .content .imgbox {
+    width: 450px;
+  }
+  .content .imgbox img {
+    max-width: 450px;
+  }
+  .content .textbox h2 {
+    font-size: 2.5em;
+  }
+  .content .textbox p {
+    font-size: 1em;
+    width: 300px;
+  }
+  .circle {
+    clip-path: circle(500px at right 750px);
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .content .imgbox {
+    width: 400px;
+  }
+  .content .imgbox img {
+    max-width: 400px;
+  }
+  .circle {
+    clip-path: circle(500px at right 750px);
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .toggle {
+    display: block;
+  }
+  .navigation.active {
+    display: flex;
+  }
+  section {
+    padding: 15px 15px;
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header ul {
+    display: none;
+  }
+  .content .textbox p {
+    max-width: 800px;
+  }
+  section {
+    padding-bottom: 100px;
+  }
+  .content .imgbox {
+    width: 300px;
+  }
+  .content .imgbox img {
+    max-width: 300px;
+  }
+  .links {
+    background-color: #0779e4;
+    border-radius: 10px;
+    right: 0;
+    padding: 0.5em;
+  }
+  .links li {
+    margin-left: 0;
+  }
+  .content .textbox p {
+    max-width: 600px;
+  }
+  .circle {
+    clip-path: circle(300px at center bottom);
+  }
+}

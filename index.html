@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bitis landing page</title>
+    <meta charset="utf-8" />
+
+    <link href="./assets/style/style.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" = />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <img src="./assets//logo.png" />
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What' new</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textbox">
+          <h2>
+            It's not just Shoes<br />
+            It's <span id="bitits">Bitis</span>
+          </h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            deserunt molestias impedit sed quos at numquam sequi fuga quisquam,
+            possimus quaerat hic doloremque quasi blanditiis id sunt rerum
+            nesciunt ipsam cum molestiae! Facere doloribus earum, incidunt vitae
+            accusantium possimus suscipit.
+          </p>
+          <a href="#" id="learnMore"> Learn more</a>
+        </div>
+        <div class="imgbox">
+          <img src="assets/sneaker-2.png" id="imgShow" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="./assets/sneaker-2.png"
+            onclick="onClick('assets/sneaker-2.png');changeColor('#0779e4')"
+          />
+        </li>
+        <li>
+          <img
+            src="./assets/sneaker-1.png"
+            onclick="onClick('assets/sneaker-1.png');changeColor('#4CBB17')"
+          />
+        </li>
+        <li>
+          <img
+            src="./assets/sneaker-3.png"
+            onclick="onClick('assets/sneaker-3.png');changeColor('#B80F0A')"
+          />
+        </li>
+      </ul>
+      <ul class="links">
+        <li>
+          <a href="https://www.facebook.com/InterviewCandies" target="_blank"
+            ><img src="./assets/facebook.png" id="facebook"
+          /></a>
+        </li>
+        <li>
+          <a href="https://github.com/InterviewCandies" target="_blank"
+            ><img src="./assets/github.png"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/voqthang/" target="_blank"
+            ><img src="./assets/linkedin.png"
+          /></a>
+        </li>
+      </ul>
+    </section>
+    <script type="text/javascript">
+      function onClick(img) {
+        document.getElementById("imgShow").src = img;
+        console.log(document.getElementById("imgShow"), img);
+      }
+      function changeColor(color) {
+        document.querySelector(".circle").style.backgroundColor = color;
+        document.querySelector("#learnMore").style.backgroundColor = color;
+        document.querySelector("#bitits").style.color = color;
+      }
+      function toggleMenu() {
+        document.querySelector(".toggle").classList.toggle("active");
+        document.querySelector(".navigation").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
