@@ -4,7 +4,7 @@
 
 Note: Change viewport to see website responsive
 
----
+## ![img](./assets/img.PNG)
 
 ## Technologies
 
